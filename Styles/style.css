@@ -44,6 +44,18 @@
         height: 100px;
     }
     
+    .header.fixed {
+        position: fixed;
+        background-color: #31344e;
+        height: auto;
+    }
+    
+    .header.fixed .header__inner {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 0;
+    }
+    
     .header__inner {
         display: flex;
         justify-content: space-between;
@@ -336,6 +348,7 @@
     .reviews__item {
         display: flex;
         flex-wrap: wrap;
+        overflow: hidden;
     }
     
     .reviews__photo {
@@ -374,6 +387,15 @@
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
+    }
+    
+    .reviews__slider {
+        height: 500px;
+        overflow: hidden;
+    }
+    
+    .reviews__slider.slick-initialized {
+        height: auto;
     }
     /*Download*/
     
@@ -502,6 +524,19 @@
         /*Nav*/
         .nav {
             display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            flex-direction: column;
+            width: 100%;
+            text-align: right;
+            background-color: #31344e;
+        }
+        .nav.show {
+            display: flex;
+        }
+        .nav__link {
+            padding: 9px 15px;
         }
         /*Burger*/
         .burger {
